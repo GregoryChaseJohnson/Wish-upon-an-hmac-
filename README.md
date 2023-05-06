@@ -14,7 +14,7 @@ At a high level, Wish Upon an HMAC is an iterative challenge-response system for
 
 
 
-
+# <span style="font-size:48px;">basic architecture</span>
 The process starts with the client sending an "initiation string" of ASCII characters to the server. I used 
 len 20 in the code.
 
