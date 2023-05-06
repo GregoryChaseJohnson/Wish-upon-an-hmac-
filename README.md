@@ -108,7 +108,7 @@ Transmit.....
                                                                                   └───> Compare and 
                                                                                   authenticate
 #next iteration
-# <span style="font-size:48px;">potential downsides !</span>     
+# <span style="font-size:48px;">potential downsides</span>     
 Ultimately the model cannibolizes the initiation string which is sent on the 1st iteration. The subsequent iterations are essentially recycling the previous iterations " handshake_fullstring " as the message that then gets used in the function
 
 "def generate_hmac(message, key):
