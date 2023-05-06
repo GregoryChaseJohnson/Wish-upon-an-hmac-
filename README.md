@@ -1,5 +1,9 @@
+# <span style="font-size:48px;">Wish upon an hmac</span>
+
+
+
 Data is the fuel that many computation processes use to derive patterns. So giving less data to an eaves 
-dropper is a virtue no doubt. Thus in a client-server authentication protocal wouldn't it be nice to 
+dropper is a virtue no doubt. Therefor in a client-server authentication protocal wouldn't it be nice to 
 truncate a large, complex string into a smaller string thus making it harder for an eaves dropper to infer 
 structure from and reverse engineer? But a small code could easily suffer from brute force attacks. But 50
 or 100 small codes in an explicit sequence that varies every instance the authentication protocal is run would be quite a bit 
@@ -7,6 +11,9 @@ more challenging to hack. And in the interest of better security, I invite all w
 decoding transmissions or by preventing that from happening.
 
 At a high level, Wish Upon an HMAC is an iterative challenge-response system for client-server authentication. The communication is one-way, with the client (in the "req.py" script) initiating the process. The client generates a large initiation string, which is then passed through an HMAC function along with a secret key shared between the client and the server.
+
+
+
 
 The process starts with the client sending an "initiation string" of ASCII characters to the server. I used 
 len 20 in the code.
