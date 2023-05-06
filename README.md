@@ -88,7 +88,7 @@ Full String
 
 
 
-============================================================================>     Authenticator
+============================================================================>             Authenticator
 
                                                                                4. Receive Handshake Clip (and
                                                                                   Initiation String for first
@@ -104,7 +104,7 @@ Full String
                                                                                 
                                                                                     
                                                                                   └───> Compare and 
-                                                                                  authenticat
+                                                                                  authenticate
 #next iteration
                                                                                   
                                                                                   
