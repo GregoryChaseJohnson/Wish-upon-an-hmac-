@@ -58,10 +58,9 @@ handshake full string as input instead of the initiation string which only happe
 
 
 
-1 iteration:
+# <span style="font-size:48px;"in more detail!</span>
 
-Requester                             Transmission                      Authenticator
-                                      ============                    
+Requester                                            
 
 
 1. Randmonly Generate Initiation String
@@ -90,7 +89,7 @@ Full String
 
 
 
-============================================================================>
+============================================================================>     Authenticator
 
                                                                                4. Receive Handshake Clip (and
                                                                                   Initiation String for first
