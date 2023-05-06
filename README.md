@@ -88,7 +88,9 @@ Full String
 
 
 
-============================================================================>             Authenticator
+============================================================================>             
+
+                                                                                        Authenticator
 
                                                                                4. Receive Handshake Clip (and
                                                                                   Initiation String for first
