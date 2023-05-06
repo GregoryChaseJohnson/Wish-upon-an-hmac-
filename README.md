@@ -87,7 +87,7 @@ Full String
 
 
 
-
+Transmit.....
 ============================================================================>             
 
                                                                                         Authenticator
@@ -108,9 +108,14 @@ Full String
                                                                                   └───> Compare and 
                                                                                   authenticate
 #next iteration
+# <span style="font-size:48px;">potential downsides !</span>     
+Ultimately the model cannibolizes the initiation string which is sent on the 1st iteration. The subsequent iterations are essentially recycling the previous iterations " handshake_fullstring " as the message that then gets used in the function
+
+"def generate_hmac(message, key):
+    return hmac.new(key.encode(), message.encode(), hashlib.sha256).hexdigest()
+"
                                                                                   
-                                                                                  
-                                                                                  
+A new handshake fullstring is then produced, but I can imagine the randomness gets progressivelly reduced per subsequent iteration. But the question is, does it matter? Is it still mathematically infeasable for an eaves dropper to be able to send an initiation string and guess the handshake fullstring and the handhsake clip without having the secret key for the hmac and the seed to the random number generator ( which truncates the handshake fullstring to create the handhsake clip.                                                                                
                                                                                   
                                                                                   
                                                                                   
