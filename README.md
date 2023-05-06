@@ -116,7 +116,8 @@ Ultimately the model cannibolizes the initiation string which is sent on the 1st
 "
                                                                                   
 A new handshake fullstring is then produced, but I can imagine the randomness gets progressivelly reduced per subsequent iteration. But the question is, does it matter? Is it still mathematically infeasable for an eaves dropper to be able to send an initiation string and guess the handshake fullstring and the handhsake clip without having the secret key for the hmac and the seed to the random number generator ( which truncates the handshake fullstring to create the handhsake clip.                                                                                
-# <span style="font-size:48px;">License</span>                                                                MIT
+# <span style="font-size:48px;">License</span>   
+MIT 
                                                                                   
                                                                                   
                                                                                   
