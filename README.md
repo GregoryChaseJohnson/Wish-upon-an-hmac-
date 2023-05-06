@@ -106,8 +106,8 @@ Transmit.....
                                                                                 └───> 
                                                                                 
                                                                                     
-                                                                                  └───> Compare and 
-                                                                                  authenticate
+                                                                                  └───> Compare the recieved handshake clip with interanlly generated handshake clip.
+                                                                                  If same then authenticate.
 #next iteration
 # <span style="font-size:48px;">potential downsides</span>     
 Ultimately the model cannibolizes the initiation string which is sent on the 1st iteration. The subsequent iterations are essentially recycling the previous iterations " handshake_fullstring " as the message that then gets used in the function
