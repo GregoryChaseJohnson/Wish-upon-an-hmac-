@@ -57,8 +57,7 @@ The process is repeated for a pre-determined number of iterations, with each ite
 handshake full string as input instead of the initiation string which only happens once. 
 
 
-
-# <span style="font-size:48px;"in more detail!</span>
+# <span style="font-size:48px;">a bit more detailed</span>
 
 Requester                                            
 
