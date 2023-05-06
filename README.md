@@ -106,7 +106,8 @@ Transmit.....
                                                                                 └───> 
                                                                                 
                                                                                     
-                                                                                  └───> Compare the recieved handshake clip with interanlly generated handshake clip.
+                                                                                  └───> Compare the recieved handshake clip 
+                                                                                  with interanlly generated handshake clip.
                                                                                   If same then authenticate.
 #next iteration
 # <span style="font-size:48px;">potential downsides</span>     
