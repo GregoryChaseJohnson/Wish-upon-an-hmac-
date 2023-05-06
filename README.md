@@ -66,8 +66,9 @@ Requester
 
    └───> Store Initiation String
 
-2. Generate HMAC with Initiation
-String and Secret Key
+2. Generate Full string by passing 
+HMAC with Key to Initiation
+String.
 
 └───> Store Handshake Full String
 
@@ -92,10 +93,10 @@ Transmit.....
 
                                                                                         Authenticator
 
-                                                                               4. Receive Handshake Clip (and
+                                                                               4. Receive and store Handshake Clip (and
                                                                                   Initiation String for first
                                                                                                    iteration)
-                                                                                └───> Store Initiation String
+                                                                                └───> 
                                                                              
                                                                                 5. Generate & strore 
                                                                                 Handshake full_string using 
