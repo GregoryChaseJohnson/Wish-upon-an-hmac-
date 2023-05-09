@@ -1,16 +1,8 @@
 # <span style="font-size:48px;">Wish upon an hmac</span>
 
+This code is meant to be a dynamic challenge-response authentication system presented in this repository, Wish Upon an HMAC, aims to increase security by employing infinitely variable passwords to protect against eavesdropping and brute force attacks. By truncating large strings into smaller segments, the system makes it difficult for eavesdroppers to infer structure and reverse engineer the data.
 
-
-Data is the fuel that many computation processes use to derive patterns. So giving less data to an eaves 
-dropper is a virtue no doubt. Therefor in a client-server authentication protocal wouldn't it be nice to 
-truncate a large, complex string into a smaller string thus making it harder for an eaves dropper to infer 
-structure from and reverse engineer? But a small code could easily suffer from brute force attacks. But 50
-or 100 small codes in an explicit sequence that varies every instance the authentication protocal is run would be quite a bit 
-more challenging to hack. And in the interest of better security, I invite all who want to contribute by 
-decoding transmissions or by preventing that from happening.
-
-At a high level, Wish Upon an HMAC is an iterative challenge-response system for client-server authentication. The communication is one-way, with the client (in the "req.py" script) initiating the process. The client generates a large initiation string, which is then passed through an HMAC function along with a secret key shared between the client and the server.
+During the authentication process, the client generates a large initiation string, which is then passed through an HMAC function together with a secret key shared between the client and server. The system utilizes a sequence of 50 to 100 small codes that change with each authentication instance, resulting in an infinitely variable authentication mechanism
 
 
 
