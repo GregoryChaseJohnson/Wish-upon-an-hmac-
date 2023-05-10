@@ -1,6 +1,6 @@
 # <span style="font-size:48px;">Wish upon an hmac</span>
 
-This code is meant to be a dynamic challenge-response authentication system. Wish Upon an HMAC, aims to increase security by employing infinitely variable passwords to protect against eavesdropping and brute force attacks. By truncating large strings into smaller segments, the system makes it difficult for eavesdroppers to infer structure and reverse engineer the data.
+This code is meant to be a dynamic challenge-response authentication system aiming to increase security by employing infinitely variable passwords to protect against eavesdropping and brute force attacks. By truncating large strings into smaller segments, the system makes it difficult for eavesdroppers to infer structure and reverse engineer the data.
 
 During the authentication process, the client generates a large initiation string, which is then passed through an HMAC function together with a secret key shared between the client and server. The system utilizes a sequence of 50 scodes that change with each authentication instance. In short, The auth.py and req.py manipulate the initiation string identically resulting in the req.py accurately predicting a a small truncatation of the child of the initiation string, the "handshake_fullstring" which the auth.py produces internally but never shares.
 
