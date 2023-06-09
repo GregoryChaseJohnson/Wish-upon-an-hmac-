@@ -1,8 +1,19 @@
 # <span style="font-size:48px;">Wish upon an hmac</span>
+This repository contains a dynamic challenge-response authentication system designed to bolster security by using variable passwords to mitigate eavesdropping and brute force attacks. It achieves this by transmitting small segments of large strings from the client to the server, making reverse engineering significantly harder for potential eavesdroppers.
 
-This code is meant to be a dynamic challenge-response authentication system aiming to increase security by employing infinitely variable passwords to protect against eavesdropping and brute force attacks. By truncating large strings which hold the parent structure, into smaller segments transmintted from the client to the server, eavesdroppers have a smaller amount of information with which to infer structure from the much larger string, thus increasing the diffficulty of reverse engineering the transmissions.
+Here's how it works:
 
-In this cocnept, the authentication process starts with the client generating a large initiation string, which is then passed through an HMAC function together with a secret key shared between the server. The resultant offpsring of the initiation string being passed through the hmac function is derived internally by both the client and server and is reffered to as  the " handshake fullstring." From this handhshake fullstring a small clip is extracted of N size and N location within the handshaske fullstring. N is the result of passing the string to a random function which produces a deterministic output string called the "handshake clip." Both client and server produce the same clip deterministically. The clip is then shared, from the client to the server for autherization for that iteration. If it's a success, meaning if the server  predicted what the client sent, then the next iteration begins. The initiation string gets stored and checked against in future authorization attempts. The next iteration is begining it's process with the previous iterations handshake fullstring so no initiation string is required. Both server and client derive the next iterations handshake fullstring internally. Only the handhsake clips are sent by the client to the server. Iterations are set at 50 in the code, after which the autherization process is complete.
+The client generates a large "initiation string" and passes it through an HMAC function with a shared secret key, resulting in the 'handshake fullstring', which both parties derive internally.
+
+A small clip (the 'handshake clip') of size and location N within the fullstring is determined by a random function. Both client and server deterministically produce this clip.
+
+The client sends the clip to the server for validation. If the server successfully predicts the client's clip, the process proceeds to the next iteration. 
+
+Subsequent iterations use the previous fullstring, so no new initiation string is required. The client sends only the handshake clips to the server.
+
+The authorization process completes after 50 iterations, as defined in the code.
+
+The code runs 50 iterations in less that a second.
 
 # <span style="font-size:48px;">basic architecture</span>
 The process starts with the client sending an "initiation string" of ASCII characters to the server. I used 
