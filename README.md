@@ -3,7 +3,7 @@ This repository contains a dynamic challenge-response authentication system desi
 
 Here's how it works:
 
-The client generates a large "initiation string" and passes it through an HMAC function with a shared secret key, resulting in the 'handshake fullstring', which both parties derive internally.
+The client generates a large "initiation string" and passes it through an HMAC function with a secret key that both server and client store on device, resulting in the 'handshake fullstring', which both parties derive internally.
 
 A small clip (the 'handshake clip') of size and location N within the fullstring is determined by a random function. Both client and server deterministically produce this clip.
 
